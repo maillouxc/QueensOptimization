@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>  
+    <head>
+        <title>Queens Optimization Game</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="icon" href="Resources/Images/chessQueenIcon.png"/>
+        <link rel="stylesheet" type="text/css" href="styles.css"/>
+        <script type="text/javascript" src="QueensOptimization.js"></script>
+    </head>
+    
+    <body>
+        <div id="game_container">
+            <h2>Queens Optimization Game</h2>
+	    <p>
+	        <b>Instructions:</b>
+                Place the minimum number of queens on the board such that
+	        every square is dominated by at least one queen.
+            </p>
+	    
+	    <table id="game_board"></table>
+		
+	    <p>
+		<span id="queens_used" class="score">Queens used: 0</span>
+	        <span id="score_divider">|</span>
+	        <span id="best" class="score">Best: Not solved yet</span>
+	    </p>
+            
+	    <p id="board_size_button">Change board size</p>
+        </div>
+        
+        <footer>
+            &copy; 2017, Christopher L. Mailloux
+            <p>Redistribution and modification is freely permitted, as long 
+            as credit is clearly provided, and I am notified via 
+            github <a href = "github.com/maillouxc">here</a>.
+            </p>
+        </footer>
+        
+    </body>
+</html>

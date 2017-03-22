@@ -1,0 +1,104 @@
+/* Stylesheet for QueensOptimizationGame index.html */
+
+h2 {
+    margin: 1em auto;
+    text-align: center;
+}
+
+p {
+    text-align:center;
+}
+
+footer {
+    text-align: center;
+}
+
+footer p {
+	margin: 0.5em auto 1em auto;
+}
+
+a:hover {
+	color: green;
+}
+
+#game_container {
+    background-color: burlywood;
+    margin: 1em auto;
+    padding: 0em 3em;
+    width: fit-content;
+    border-radius: 1em;
+    border-style: solid;
+    border-width: 0.5em;
+    border-color: darkred;
+    text-align: center;
+}
+
+#game_board {
+    margin-left: auto;
+    margin-right: auto;
+    border-collapse: collapse;
+}
+
+#board_size_button {
+    margin: 1em auto;
+    padding: 0.5em 1em;
+    background-color: blueviolet;
+    text-align: center;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.2em;
+    border-radius: 1em;
+    border-style: solid;
+	border-color: burlywood;
+    width: fit-content;
+    color: gold;
+}
+
+#board_size_button:hover {
+    color: red;
+    cursor: pointer;
+	border-color: darkred;
+}
+
+#board_size_button:active {
+    color:white;
+    cursor: pointer;
+	border-color: darkred;
+}
+
+.white_square, .black_square {
+    padding: 0;
+    margin: 0;
+    border: 0.1em solid black;
+    height: 4.5em;
+    width: 4.5em;
+    vertical-align: middle;
+    text-align: center;
+    cursor: pointer;
+}
+
+.white_square {
+    /* Stands out a little from the background white */
+    background-color: antiquewhite; 
+}
+
+.black_square {
+    background-color: black;
+}
+
+.dominated {
+    background-color: gold;
+}
+
+.queen {
+    width: 4em;
+    height: 4em;
+    cursor: pointer;
+	user-select: none;
+}
+
+.score {
+	text-align: center;
+	font-weight: bold;
+	margin: 1em auto 0.5em auto;
+}
