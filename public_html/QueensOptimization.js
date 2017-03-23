@@ -4,6 +4,7 @@ var boardSizeX = 8;
 var boardSizeY = 8;
 var chessBoardSquares;
 var queensUsed = 0;
+var hasFinishedAtLeastOnce = false;
 var best = 0;
 
 // Once the base page HTML loads fully, starts the script.
@@ -24,6 +25,7 @@ function onBoardSizeButtonClicked() {
 	createBoard();
 	updateBest(true);
 	queensUsed = 0;
+	hasFinishedAtLeastOnce = false;
 }
 
 function initializeChessBoardSquares() {
@@ -84,6 +86,7 @@ function onSquareClicked() {
 	updateQueensUsedHTML();
 	if (checkIfSolved()) {
 		updateBest();
+		hasFinishedAtLeastOnce = true;
 	}
 }
 
@@ -104,8 +107,11 @@ function updateBest(reset = false) {
 	var bestHTML = document.getElementById("best");
 	if(reset) {
 		bestHTML.innerHTML = "Best: Not solved yet";
+	} else if (hasFinishedAtLeastOnce) {
+		best = (queensUsed < best) ? queensUsed : best;
+		bestHTML.innerHTML = ("Best: " + best);
 	} else {
-		best = queensUsed < best ? queensUsed : best;
+		best = queensUsed;
 		bestHTML.innerHTML = ("Best: " + best);
 	}
 }
