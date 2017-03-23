@@ -105,7 +105,7 @@ function updateBest(reset = false) {
 	if(reset) {
 		bestHTML.innerHTML = "Best: Not solved yet";
 	} else {
-		best = queensUsed > best ? queensUsed : best;
+		best = queensUsed < best ? queensUsed : best;
 		bestHTML.innerHTML = ("Best: " + best);
 	}
 }
